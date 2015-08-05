@@ -1,0 +1,67 @@
+{% extends 'limubacadministratorBundle:administracion:header.html.twig'%}
+
+{% block PageContent %}
+
+{% if error %}
+    <div class="alert alert-danger">Error de autenticacion.
+    {% if error.message == "User account is disabled." %}
+	    "Su usuario esta inhabilitado. Favor de ponerse en contacto con la liga."
+	    	<a href="{{url('limubacadministrator_Contacto')}}">   Click aqui para ponerse en contacto</a>
+	    
+    {% endif %}
+    </div>
+{% endif %}
+
+<!--div class="alert alert-danger">Sesion iniciada por </div-->
+
+<legend> <P ALIGN=center> Bienvenido al sistema LIMUBAC, para empezar Inicia Sesion </P></legend>
+<div class="row">
+<div class="col-md-4"></div>
+	<div class='col-md-6'>
+
+		<form class="form-horizontal" background-image="entrada.jpg" action="{{path('login_check')}}" role='form' method='POST'>
+
+	<!-- Form Name -->
+
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="username">Usuario</label>
+			  <div class="controls">
+			    <input id="username" name="_username" type="text" placeholder="" class="input-xlarge" required="true">
+
+			  </div>
+			</div>
+
+			<!-- Password input-->
+			<div class="control-group">
+			  <label class="control-label" for="password">Password</label>
+			  <div class="controls">
+			    <input id="password" name="_password" type="password" placeholder="" class="input-xlarge" required="true">
+
+			    <p>
+			    </p>
+			<!-- Button (Double) -->
+			<!--div class="control-group">
+			  <label class="control-label" for="enviar_sesion"></label>
+			  <div class="controls">
+
+			    <a id="Lo olvidé" name="Lo olvidé" href='#' class="btn btn-danger">Estoy wey, olvidé mi contraseña</a>
+			  </div>
+			</div-->
+			<IMG id='p1' SRC="{{asset('images/pg1.png')}}">
+			<IMG id='p1' SRC="{{asset('images/pg2.png')}}">
+			<IMG id='p1' SRC="{{asset('images/pg3.png')}}">
+			<IMG id='p1' SRC="{{asset('images/tg1.png')}}">
+			<IMG id='p1' SRC="{{asset('images/tg2.png')}}">
+			<p>
+			    </p>
+
+
+			<button type="submit" id="enviar_sesion" name="enviar_sesion" class="btn btn-success">Iniciar</button>
+		</form>
+	</div>
+
+</div>
+
+{% endblock %}

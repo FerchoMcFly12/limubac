@@ -1,0 +1,198 @@
+limubacadministrator_homepage:
+    path:     /admin
+    defaults: { _controller: limubacadministratorBundle:Default:admin}
+
+limubacadministrator_hojaAnotaciones:
+    path:     /hojaAnotaciones/{idpartido}
+    defaults: { _controller: limubacadministratorBundle:HojaAnotaciones:hojaAnotaciones,idpartido:0}
+
+limubacadministrator_hojapdf:
+    path:     /hojapdf
+    defaults: { _controller: limubacadministratorBundle:HojaAnotaciones:hojapdf}
+
+limubacadministrator_nombresEquipos:
+    path:     /nombresEquipos
+    defaults: { _controller: limubacadministratorBundle:HojaAnotaciones:nombresEquipos}
+
+limubacadministrator_equipos:
+    path:     /equipos
+    defaults: { _controller: limubacadministratorBundle:Equipos:equipos}
+
+limubacadministrator_editarEquipo:
+    path:     /editarEquipo
+    defaults: { _controller: limubacadministratorBundle:Equipos:editarEquipo}
+
+limubacadministrator_equipo:
+    path:     /equipo
+    defaults: { _controller: limubacadministratorBundle:Equipos:equipo}
+
+limubacadministrator_equipoNuevo:
+    path:     /equipoNuevo
+    defaults: { _controller: limubacadministratorBundle:Equipos:equipoNuevo}
+
+limubacadministrator_equipoATorneo:
+    path:     /equipoATorneo
+    defaults: { _controller: limubacadministratorBundle:Equipos:equipoATorneo}
+
+limubacadministrator_jugadoresAdmin:
+    path:     /jugadoresAdmin
+    defaults: { _controller: limubacadministratorBundle:Jugadores:jugadoresAdmin}
+
+limubacadministrator_addjugador:
+    path:     /addjugador
+    defaults: { _controller: limubacadministratorBundle:Jugadores:addjugador}
+
+limubacadministrator_uploados:
+    path:     /uploados
+    defaults: { _controller: limubacadministratorBundle:Jugadores:uploados}
+
+limubacadministrator_update:
+    path:     /update/{page}
+    defaults: { _controller: limubacadministratorBundle:Jugadores:update, page: 0}
+
+limubacadministrator_buscar:
+    path:     /buscar/{page}
+    defaults: { _controller: limubacadministratorBundle:Jugadores:buscar, page: 0}
+
+limubacadministrator_editar:
+    path:     /editar
+    defaults: { _controller: limubacadministratorBundle:Jugadores:editar}
+
+limubacadministrator_torneos:
+    path:     /torneos
+    defaults: { _controller: limubacadministratorBundle:Default:torneos}
+
+limubacadministrator_crearTorneo:
+    path:     /torneos/crear
+    defaults: { _controller: limubacadministratorBundle:Default:crearTorneo}
+
+limubacadministrator_categorias:
+    path:     /categorias
+    defaults: { _controller: limubacadministratorBundle:Default:categorias}
+
+limubacadministrator_crearCategoria:
+    path:     /categorias/crear
+    defaults: { _controller: limubacadministratorBundle:Default:crearCategoria}
+
+limubacadministrator_acTorneo:
+    path:     /acTorneo
+    defaults: { _controller: limubacadministratorBundle:Default:acTorneo}
+
+limubacadministrator_acTorneo:
+    path:     /torneo/participan
+    defaults: { _controller: limubacadministratorBundle:Default:participan}
+
+limubacadministrator_editTorneo:
+    path:     /editTorneo
+    defaults: { _controller: limubacadministratorBundle:Default:editTorneo}
+
+limubacadministrator_acCategoria:
+    path:     /acCategoria
+    defaults: { _controller: limubacadministratorBundle:Default:acCategoria}
+
+limubacadministrator_editCategoria:
+    path:     /editCategoria
+    defaults: { _controller: limubacadministratorBundle:Default:editCategoria}
+
+limubacadministrator_partidos:
+    path:     /partidos/{idtorneo}/{idpartido}/{jornada}
+    defaults: { _controller: limubacadministratorBundle:Partidos:partidoTest,idtorneo:0,idpartido:0,jornada:1}
+    methods: [GET]
+
+limubacadministrator_addrol:
+    path:     /addrol
+    defaults: { _controller: limubacadministratorBundle:Rol:addrol}
+
+limubacadministrator_rolhecho:
+    path:     /rolhecho
+    defaults: { _controller: limubacadministratorBundle:Rol:rolhecho}
+limubacadministrator_completarinfopartido:
+  path: /completarinfo/{idpartido},{idtorneo}
+  defaults: { _controller: limubacadministratorBundle:CompletarInfoPartido:completarinfopartido,idpartido:0,idtorneo:0}
+
+limubacadministrator_completarInfoPartidoPost:
+  path: /completarInfoPartidoPost/{idpartido}
+  defaults: { _controller: limubacadministratorBundle:CompletarInfoPartido:completarinfopartidoPost,idpartido:0}
+
+limubacadministrator_selectTorneo:
+  path: /seleccionarTorneo
+  defaults: { _controller:limubacadministratorBundle:SelectTorneo:seleccionarTorneo }
+
+limubacadministrator_overview:
+  path: /overview/{idtorneo}/{idpartido}/{jornada}
+  defaults: {_controller:limubacadministratorBundle:overview:overviewPartidos,idtorneo:0,idpartido:0,jornada:1}
+
+
+limubacadministrator_sessions:
+  path: /login
+  defaults: { _controller: limubacadministratorBundle:sessions:log}
+
+login_check:
+  path: /login_check
+
+limubacadministrator_sesiones:
+  path: /sesion
+  defaults: { _controller: limubacadministratorBundle:sessions:sex}
+
+limubacadministrator_finanzas:
+    path:     /finanzas
+    defaults: { _controller: limubacadministratorBundle:Finanzas:finanzas}
+
+limubacadministrator_actfin:
+    path:     /actfin
+    defaults: { _controller: limubacadministratorBundle:Finanzas:actfin}
+
+limubacadministrator_editfin:
+    path:     /editfin
+    defaults: { _controller: limubacadministratorBundle:Finanzas:editfin}
+
+limubacadministrator_sessions:
+  path: /login
+  defaults: { _controller: limubacadministratorBundle:sessions:log}
+
+login_check:
+  path: /login_check
+
+limubacadministrator_nuevoUsuario:
+  path: /users/nuevoUsuario
+  defaults: { _controller: limubacadministratorBundle:sessions:newuser}
+
+limubacadministrator_logout:
+  path: /logout
+  defaults: { _controller: limubacadministratorBundle:sessions:logout}
+
+limubacadministrator_miPerfil:
+  path: /users/miPerfil
+  defaults: { _controller: limubacadministratorBundle:sessions:miPerfil}
+
+limubacadministrator_principal:
+    path:     /
+    defaults: { _controller: limubacadministratorBundle:Default:admin}
+
+limubacadministrator_actualizarContrasena:
+  path: /users/actualizarContraseña
+  defaults: { _controller: limubacadministratorBundle:sessions:actualizarContrasena}
+
+limubacadministrator_actualizarInformacion:
+  path: /users/actualizarInformación
+  defaults: { _controller: limubacadministratorBundle:sessions:actualizarInformacion}
+
+limubacadministrator_Contacto:
+  path: /users/contacto
+  defaults: { _controller: limubacadministratorBundle:sessions:contacto}
+
+limubacadministrator_editUser:
+  path: /users/editar
+  defaults: { _controller: limubacadministratorBundle:sessions:editUser}
+
+limubacadministrator_showUser:
+  path: /users/mostrar
+  defaults: { _controller: limubacadministratorBundle:sessions:showUser}
+
+limubacadministrator_descargas:
+    path:     /descargas
+    defaults: { _controller: limubacadministratorBundle:Default:descargas}
+
+limubacadministrator_subir:
+    path:     /subir
+    defaults: { _controller: limubacadministratorBundle:Default:subir}

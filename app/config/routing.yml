@@ -1,0 +1,4 @@
+limubacadministrator:
+    resource: "@limubacadministratorBundle/Resources/config/routing.yml"
+    prefix:   /
+
